@@ -22,9 +22,9 @@ public class HelloServlet extends HttpServlet {
 
         HelloBean ejb = new HelloBean();
         String name = request.getParameter("name");
-        if (name == null) name = "World";
+        if (name == null || name.equals("")) name = "World";
         PrintWriter out = response.getWriter();
         out.println("Hello "+name+"!!!");
-        out.println(ejb.toString());
+        out.println(ejb.helloWorld());
     }
 }

@@ -10,10 +10,7 @@ import org.jboss.system.server.ServerInfo;
 public class EJB3DaoFactory extends DAOFactory {
     private static Logger logger = Logger.getLogger("DAOFactory");
 
-    public EJB3DaoFactory() {
-
-
-    }
+    public EJB3DaoFactory() {}
 
     private static InitialContext getInitialContext() throws Exception {
         //Hashtable props = getInitialContextProperties();

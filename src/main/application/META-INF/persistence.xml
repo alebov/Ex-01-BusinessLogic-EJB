@@ -10,6 +10,8 @@
 <!--        <jta-data-source>java:/DefaultDS</jta-data-source>-->
 <!--        <mapping-file>META-INF/orm.xml</mapping-file>-->
 <!--        <jar-file></jar-file>-->
+        <jta-data-source>java:jboss/datasources/test</jta-data-source>
+
         <class>it.distributedsystems.model.dao.Product</class>
         <class>it.distributedsystems.model.dao.Purchase</class>
         <class>it.distributedsystems.model.dao.Producer</class>
@@ -29,7 +31,7 @@
 
             <property name="show_sql" value="true"/>
             <property name="format_sql" value="true"/>
-            <property name="hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
 
             <!-- JDBC connection pool (use the built-in) -->
             <property name="connection.pool_size" value="10"/>

@@ -69,4 +69,16 @@ public class EJB3DaoFactory extends DAOFactory {
             return null;
         }
     }
+
+    @Override
+    public CartDAO getCartDAO() {
+        try{
+            InitialContext context = getInitialContext();
+            CartDAO result = (CartDAO)context.lookup("java:module/EJB3CartDAO");
+            return result;
+        } catch (Exception var3) {
+            logger.error("Error looking up EJB3CartDAO", var3);
+            return null;
+        }
+    }
 }

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 import it.distributedsystems.model.dao.Purchase;
+import org.hibernate.validator.constraints.UniqueElements;
 
 @Entity
 public class Product implements Serializable {

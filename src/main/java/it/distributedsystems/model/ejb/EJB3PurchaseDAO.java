@@ -1,6 +1,6 @@
 package it.distributedsystems.model.ejb;
 
-//import it.distributedsystems.model.logging.OperationLogger;
+import it.distributedsystems.model.logging.OperationLogger;
 import it.distributedsystems.model.dao.Customer;
 import it.distributedsystems.model.dao.Product;
 import it.distributedsystems.model.dao.Purchase;
@@ -29,7 +29,7 @@ import javax.persistence.PersistenceContext;
     @PersistenceContext(unitName = "distributed-systems-demo")
     EntityManager em;
 
-//    @Interceptors(OperationLogger.class)
+    @Interceptors(OperationLogger.class)
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public int insertPurchase(Purchase purchase) {
 

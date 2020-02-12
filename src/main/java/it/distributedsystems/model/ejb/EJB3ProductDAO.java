@@ -16,8 +16,6 @@ import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-
-
 @Stateless
 @Local(ProductDAO.class)
 //@Remote(ProductDAO.class)  //-> TODO: serve nella versione clustering???
@@ -25,7 +23,6 @@ public class EJB3ProductDAO implements ProductDAO {
 
     @PersistenceContext(unitName = "distributed-systems-demo")
     EntityManager em;
-
 
     @Override
     @Interceptors(OperationLogger.class)
